@@ -38,4 +38,4 @@ This project uses AI to *inform* and *assist*, not to judge.
 *   **Fairness**: The model is prompted to be "friendly" and "encouraging," avoiding shaming language.
 
 ---
-*Created by [Your Name] for the 1M1B AI for Sustainability Internship.*
+*Created by R Vikram Aadheeran for the 1M1B AI for Sustainability Internship.*
