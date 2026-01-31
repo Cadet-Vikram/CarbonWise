@@ -1,7 +1,7 @@
 # Project Description: CarbonWise
 
-**Student Name**: [Your Name]
-**College**: [Your College Name]
+**Student Name**: R Vikram Aadheeran
+**College**: Sri Sairam Institute of Technology
 **Project Title**: CarbonWise - AI-Powered Sustainability Assistant
 
 ---
