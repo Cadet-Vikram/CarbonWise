@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CarbonWise | AI Sustainability Assistant</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <!-- Remix Icons -->
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
+    <!-- Markdown Parser -->
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+</head>
+
+<body>
+    <div class="background-blobs">
+        <div class="blob blob-1"></div>
+        <div class="blob blob-2"></div>
+    </div>
+
+    <div class="container">
+        <header>
+            <div class="logo">
+                <i class="ri-leaf-line"></i> CarbonWise
+            </div>
+            <p class="subtitle">Your AI-Powered Sustainability Companion</p>
+        </header>
+
+        <main>
+            <!-- Form Section -->
+            <section id="calculator-form" class="card fade-in">
+                <h2>Estimate Your Footprint</h2>
+                <form id="footprintForm">
+                    <!-- Transport Group -->
+                    <div class="form-group">
+                        <label><i class="ri-car-line"></i> Daily Transport</label>
+                        <select id="transportMode" required>
+                            <option value="">Select Mode</option>
+                            <option value="car">Personal Car (Gas)</option>
+                            <option value="public">Public Transport (Bus/Train)</option>
+                            <option value="bike">Motorbike</option>
+                            <option value="walk_cycle">Walk / Bicycle</option>
+                            <option value="ev">Electric Vehicle</option>
+                        </select>
+                        <input type="number" id="transportDist" placeholder="Avg km per day" min="0" required>
+                    </div>
+
+                    <!-- Diet Group -->
+                    <div class="form-group">
+                        <label><i class="ri-restaurant-line"></i> Dietary Habit</label>
+                        <select id="dietType" required>
+                            <option value="">Select Diet</option>
+                            <option value="high_meat">Heavy Meat Eater</option>
+                            <option value="average">Average (Mixed)</option>
+                            <option value="pescatarian">Pescatarian (Fish/Veg)</option>
+                            <option value="vegetarian">Vegetarian</option>
+                            <option value="vegan">Vegan</option>
+                        </select>
+                    </div>
+
+                    <!-- Energy Group -->
+                    <div class="form-group">
+                        <label><i class="ri-lightbulb-flash-line"></i> Monthly Electricity</label>
+                        <input type="number" id="energyUsage" placeholder="Bill amount or kWh (approx)" min="0"
+                            required>
+                        <small>Enter approximate monthly value</small>
+                    </div>
+
+                    <button type="submit" class="btn-primary">
+                        Calculate & Get AI Tips <i class="ri-magic-line"></i>
+                    </button>
+                </form>
+            </section>
+
+            <!-- Results Section (Hidden initially) -->
+            <section id="result-section" class="hidden">
+                <div class="card result-card fade-in">
+                    <div class="score-display">
+                        <h3>Your Estimated Daily CO₂</h3>
+                        <div class="score-circle">
+                            <span id="scoreValue">0</span>
+                            <small>kg CO₂e</small>
+                        </div>
+                        <p id="scoreCategory" class="status-badge">Calculating...</p>
+                    </div>
+
+                    <div class="ai-insight-box">
+                        <div class="ai-header">
+                            <i class="ri-robot-line"></i>
+                            <span>Groq AI Analysis</span>
+                        </div>
+                        <div id="ai-loader" class="loader hidden">
+                            <div class="spinner"></div>
+                            <p>Generating personalized tips...</p>
+                        </div>
+                        <div id="ai-content" class="markdown-body">
+                            <!-- AI response goes here -->
+                        </div>
+                    </div>
+
+                    <button id="resetBtn" class="btn-secondary">Start Over</button>
+                </div>
+            </section>
+        </main>
+
+        <footer>
+            <p>Built for 1M1B Internship • SDG 13 Climate Action</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
